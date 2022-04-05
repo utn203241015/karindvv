@@ -53,7 +53,7 @@ public class VacantesController {
 		Vacante vacante = serviceVacantes.buscarPorId(idVacante);
 		model.addAttribute("categorias", serviceCategorias.obtenerCategorias());
 		model.addAttribute("vacante", vacante);
-		return "/vacantes/formVacante";
+		return "vacantes/formVacante";
 	}
 	
 	/*@PostMapping("/guardar")
@@ -120,7 +120,7 @@ public class VacantesController {
 		Vacante vac = new Vacante();
 		vac= serviceVacantes.buscarPorId(id);
 		model.addAttribute("vacante", vac);
-		return "/vacantes/detalle";
+		return "vacantes/detalle";
 	}
 	@GetMapping("/index")
 	public String mostrarIndex(Model model) {
