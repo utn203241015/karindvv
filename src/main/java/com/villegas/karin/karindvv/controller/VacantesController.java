@@ -53,7 +53,7 @@ public class VacantesController {
 		Vacante vacante = serviceVacantes.buscarPorId(idVacante);
 		model.addAttribute("categorias", serviceCategorias.obtenerCategorias());
 		model.addAttribute("vacante", vacante);
-		return "vacantes/formVacante";
+		return "/vacantes/formVacante";
 	}
 	
 	/*@PostMapping("/guardar")
