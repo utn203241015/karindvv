@@ -69,7 +69,7 @@ public class CategoriasController {
 		return "categorias/formCategoria";
 	}
 	
-	@GetMapping("eliminar/{id}")
+	@GetMapping("/eliminar")
 	public String eliminarCategoria(@PathVariable("id") int idCategoria, RedirectAttributes atributo) {
 		atributo.addFlashAttribute("msg", "¡La categoria se elimino con exito!");
 		serviceCategorias.eliminar(idCategoria);
