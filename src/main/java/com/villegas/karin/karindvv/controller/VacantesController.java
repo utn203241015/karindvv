@@ -107,7 +107,7 @@ public class VacantesController {
 	@GetMapping("/nueva")
 	public String nuevaVacante(Vacante vacante, Model model) {
 		model.addAttribute("categorias", serviceCategorias.obtenerCategorias());
-		return "/vacantes/formVacante";
+		return "vacantes/formVacante";
 	}
 	
 	@GetMapping("/eliminar")
