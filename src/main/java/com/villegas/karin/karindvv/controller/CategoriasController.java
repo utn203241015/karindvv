@@ -70,7 +70,7 @@ public class CategoriasController {
 	}
 	
 	@GetMapping("/eliminar")
-	public String eliminarCategoria(@PathVariable("id") int idCategoria, RedirectAttributes atributo) {
+	public String eliminarCategoria(@PathVariable("id") int idCategoria) {
 		atributo.addFlashAttribute("msg", "¡La categoria se elimino con exito!");
 		serviceCategorias.eliminar(idCategoria);
 		return "redirect:/categorias/indexPaginate";
